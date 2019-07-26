@@ -510,6 +510,35 @@ $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_stackoverflow}\end
 \newcommand*\ecvlastlanguage[7][3pt]{\ecvlanguage[#1]{#2}{#3}{#4}{#5}{#6}{#7}}
 \newcommand*\ecvlanguagefooter[1][0pt]{\ecvitem[#1]{}{\footnotesize\textcolor{torea-bay}{\ecv@levelskey: A1/A2: \ecv@cefbasickey\ - B1/B2: \ecv@cefindepkey\ - C1/C2: \ecv@cefprofkey}\par\ecv@langfooterkey}}
 
+%%% competenze digitali
+\newcommand*\ecvdigitalheader{%
+{\textcolor{torea-bay}{Competenza digitale}}&
+\setlength\extrarowheight{2pt}
+\begin{tabular}[t]{m{\ecv@langparwidth}|m{\ecv@langparwidth}|m{\ecv@langparwidth}|m{\ecv@langparwidth}|m{\ecv@langparwidth}}
+\firsthline
+\multicolumn{5}{c}{\textcolor{torea-bay}{AUTOVALUTAZIONE}}\tabularnewline\nopagebreak[4]\hline
+\centering\small{\textcolor{torea-bay}{Elaborazione delle informazioni}}   & \centering \small{\textcolor{torea-bay}{Comunicazione}} &\centering \small{\textcolor{torea-bay}{Creazione di Contenuti}} &\centering \small{\textcolor{torea-bay}{Sicurezza}} & \centering \small{\textcolor{torea-bay}{Risoluzione di problemi}}\tabularnewline\nopagebreak[4]
+%\lasthline
+\hline
+\end{tabular} \tabularnewline[-\arrayrulewidth]\nopagebreak[4]
+}
+\newcommand*\ecvdigital[7][0pt]{
+{#2} &
+\setlength\extrarowheight{2pt}
+\begin{tabular}{m{\ecv@langparwidth}|m{\ecv@langparwidth}|m{\ecv@langparwidth}|m{\ecv@langparwidth}|m{\ecv@langparwidth}}
+\hline
+\centering Avanzata & \centering Avanzata & \centering Avanzata & \centering Avanzata & \centering Avanzata \tabularnewline\nopagebreak[4]
+\hline
+\end{tabular}\vspace{#1}
+\tabularnewline[-\arrayrulewidth]\nopagebreak[4]
+}
+
+\newcommand*\ecvlastdigital[7][3pt]{\ecvdigital[#1]{#2}{#3}{#4}{#5}{#6}{#7}}
+\newcommand*\ecvdigitalfooter[1][0pt]{\ecvitem[#1]{}{\footnotesize\textcolor{torea-bay}{Livelli:\ Utente\ base\ - \ Utente\ intermedio\ -\ Utente\ avanzato}\par\ecv@utf{\href{https://europass.cedefop.europa.eu/it/resources/digital-competences}{Competenze digitali - Scheda per l'autovalutazione}}}}
+
+%%%
+
+
 % See the Common European Framework of Reference for Languages:
 % http://www.coe.int/T/E/Cultural_Co-operation/education/Languages/Language_Policy/Common_Framework_of_Reference/default.asp
 \ifx\ecv@booktabs\undefined % Use table conforming to EU model
