@@ -635,6 +635,23 @@ $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_stackoverflow}\end
 }
 {\end{longtable}}
 
+% @todo Define a "first" option for europecv environment
+% @body Instead of defining and additional environment, `europecvCont` in this case, add a `[first]` option to `europecv`, so that only one environment is used. When the `first` option is not specified, the Europass logo and the title will not be printed. This is conceived so that one can put material between `europecv` environments, that needs page breaking. See current use in the eu cv.
+\newenvironment{europecvCont}{%
+  \ecvLeftColumnWidth{\ecv@leftcolwidth}
+  \setlength\arrayrulewidth{\ecv@rulewidth}
+  \setlength\extrarowheight{\ecv@extrarowheight}
+  \setlength\LTleft{0pt}
+  \setlength\LTright{0pt}
+  % Language table paragraph width
+  \setlength\ecv@langparwidth{.199\ecv@rightcolwidth}
+  \addtolength{\ecv@langparwidth}{-2\tabcolsep}
+  \addtolength{\ecv@langparwidth}{-2\arrayrulewidth}
+  % Begin
+  \begin{longtable}[l]{@{}>{\raggedleft}p{\ecv@leftcolwidth}@{\hspace{\ecv@colsep}}@{\extracolsep{\ecv@colsep}}p{\ecv@rightcolwidth}@{}}
+}
+{\end{longtable}}
+
 \newcommand{\ecvsection}[2][10pt]{%
 \tabularnewline
 \noindent\parbox[b]{\hsize}{\raggedleft\textcolor{torea-bay}{\MakeTextUppercase{#2}}}\vspace{#1} & \color{boston-blue}\hrulefill\vspace{#1}\tabularnewline\nopagebreak}
